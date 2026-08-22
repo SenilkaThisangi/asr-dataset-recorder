@@ -182,9 +182,14 @@ image as `backend/static/` and served directly by FastAPI.
    detect the `Dockerfile` at the repo root (or use `render.yaml` if you enable
    Blueprint deploys) — no separate build/start commands needed since the Dockerfile
    handles both.
-3. Choose a **persistent instance type** (e.g. Starter or higher) — not a serverless
-   product — since this app needs ffmpeg available at all times and should handle
-   larger file uploads without cold-start constraints.
+3. Choose an instance type:
+   - **Free tier** works fine for occasional/internal use — same Dockerfile, ffmpeg
+     and uploads work identically once the instance is running. The trade-off: it
+     spins down after ~15 minutes of inactivity, so the first request after a period
+     of idleness takes 30-60s to wake back up (later requests are fast).
+   - **Starter or higher** (paid) if you want no cold starts / always-on — a
+     persistent instance rather than a serverless one, best if many contributors
+     will be recording concurrently or want instant load times.
 4. Set the environment variables in the Render dashboard (**Environment** tab):
    - `SHEET_ID`
    - `SHEET_TAB_NAME`

@@ -2,7 +2,7 @@ services:
   - type: web
     name: asr-recording-collector
     runtime: docker
-    plan: starter
+    plan: free
     dockerfilePath: ./Dockerfile
     envVars:
       - key: SHEET_ID
@@ -17,3 +17,13 @@ services:
         sync: false
       - key: GOOGLE_OAUTH_REFRESH_TOKEN
         sync: false
+      - key: COL_UTTERANCE_ID
+        value: utterence_id
+      - key: COL_USER
+        value: speaker
+      - key: COL_UTTERANCE_TEXT
+        value: utterence
+      - key: COL_STATUS
+        value: status
+      - key: COL_DRIVE_FILE_LINK
+        value: audio
