@@ -29,7 +29,7 @@ def main() -> None:
     client_secret_path = sys.argv[1]
 
     flow = InstalledAppFlow.from_client_secrets_file(client_secret_path, scopes=DRIVE_SCOPES)
-    credentials = flow.run_local_server(port=0, access_type="offline", prompt="consent")
+    credentials = flow.run_local_server(port=8765, access_type="offline", prompt="consent")
 
     if not credentials.refresh_token:
         print(

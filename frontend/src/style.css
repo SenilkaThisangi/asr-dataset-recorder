@@ -2,6 +2,52 @@
 
 @theme {
   --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
+
+  /* ---- Brand palette ----
+     navy #1B2632 · slate #2C3B4D · sand #C9C1B1 · accent(orange) #FFB162 · clay #A35139
+     Tints/shades are hand-mixed toward white / black so we still have
+     50/100/.../700 style ramps for backgrounds, borders and hover states. */
+
+  /* accent — warm orange, the primary action colour (buttons, active state) */
+  --color-accent-50: #fff6ec;
+  --color-accent-100: #ffe9d1;
+  --color-accent-200: #ffd6a9;
+  --color-accent-300: #ffc283;
+  --color-accent-400: #ffb162;
+  --color-accent-500: #f59a3f;
+  --color-accent-600: #db7f28;
+  --color-accent-700: #b0631d;
+
+  /* clay — burnt terracotta, used for the record button and error states */
+  --color-clay-50: #f8ede9;
+  --color-clay-100: #efd8d0;
+  --color-clay-200: #e0b3a5;
+  --color-clay-300: #cd8b76;
+  --color-clay-400: #b96b52;
+  --color-clay-500: #a35139;
+  --color-clay-600: #8a4430;
+  --color-clay-700: #6d3626;
+
+  /* sand — warm neutral for muted surfaces, progress tracks, secondary text */
+  --color-sand-50: #f7f5f0;
+  --color-sand-100: #efece3;
+  --color-sand-200: #e2ddd0;
+  --color-sand-300: #d5cebc;
+  --color-sand-400: #c9c1b1;
+  --color-sand-500: #a89f8b;
+  --color-sand-600: #857c68;
+
+  /* ink — cool navy neutrals for text, borders, dark surfaces */
+  --color-ink-50: #eef1f4;
+  --color-ink-100: #dce1e7;
+  --color-ink-200: #b9c2cd;
+  --color-ink-300: #8f9caa;
+  --color-ink-400: #5f7082;
+  --color-ink-500: #435364;
+  --color-ink-600: #2c3b4d;
+  --color-ink-700: #253141;
+  --color-ink-800: #1f2937;
+  --color-ink-900: #1b2632;
 }
 
 @keyframes pulse-ring {
